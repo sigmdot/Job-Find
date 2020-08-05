@@ -92,9 +92,14 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.sass"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           }
         },
         "lint": {
@@ -123,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "jobFind"
+    }
+  },
+  "defaultProject": "jobFind",
+  "cli": {
+    "analytics": "1622ddf5-f0b4-43ac-acc3-5471e9f8c937"
+  }
 }
