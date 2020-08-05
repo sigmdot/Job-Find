@@ -12,6 +12,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ErrorComponent } from './views/error/error.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { ListasOfertasLaboralesComponent } from './listas-ofertas-laborales/listas-ofertas-laborales.component';
+import { ItemListaComponentComponent } from './item-lista-component/item-lista-component.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ListasOfertasLaboralesComponent } from './listas-ofertas-laborales/list
     NavbarComponent,
     ErrorComponent,
     MapaComponent,
-    ListasOfertasLaboralesComponent
+    ListasOfertasLaboralesComponent,
+    ItemListaComponentComponent
   ],
   imports: [
     BrowserModule,
