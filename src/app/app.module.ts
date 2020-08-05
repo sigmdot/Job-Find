@@ -10,6 +10,7 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 //librerias
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ErrorComponent } from './views/error/error.component';
+import { MapaComponent } from './mapa/mapa.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ErrorComponent } from './views/error/error.component';
     HomeComponent,
     LoginComponent,
     NavbarComponent,
-    ErrorComponent
+    ErrorComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
