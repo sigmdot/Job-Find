@@ -9,13 +9,15 @@ import { LoginComponent } from './views/login/login.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 //librerias
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ErrorComponent } from './views/error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
