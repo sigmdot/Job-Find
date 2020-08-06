@@ -10,6 +10,9 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 //librerias
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ErrorComponent } from './views/error/error.component';
+import { MapaComponent } from './mapa/mapa.component';
+import { ListasOfertasLaboralesComponent } from './listas-ofertas-laborales/listas-ofertas-laborales.component';
+import { ItemListaComponentComponent } from './item-lista-component/item-lista-component.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ErrorComponent } from './views/error/error.component';
     HomeComponent,
     LoginComponent,
     NavbarComponent,
-    ErrorComponent
+    ErrorComponent,
+    MapaComponent,
+    ListasOfertasLaboralesComponent,
+    ItemListaComponentComponent
   ],
   imports: [
     BrowserModule,
