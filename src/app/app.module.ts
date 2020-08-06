@@ -11,6 +11,8 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ErrorComponent } from './views/error/error.component';
 import { MapaComponent } from './mapa/mapa.component';
+import { ListasOfertasLaboralesComponent } from './listas-ofertas-laborales/listas-ofertas-laborales.component';
+import { ItemListaComponentComponent } from './item-lista-component/item-lista-component.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { MapaComponent } from './mapa/mapa.component';
     LoginComponent,
     NavbarComponent,
     ErrorComponent,
-    MapaComponent
+    MapaComponent,
+    ListasOfertasLaboralesComponent,
+    ItemListaComponentComponent
   ],
   imports: [
     BrowserModule,
