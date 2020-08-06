@@ -14,6 +14,7 @@ import { MapaComponent } from './mapa/mapa.component';
 import { ListasOfertasLaboralesComponent } from './listas-ofertas-laborales/listas-ofertas-laborales.component';
 import { ItemListaComponentComponent } from './item-lista-component/item-lista-component.component';
 import { UltimosTrabajosComponent } from './views/ultimos-trabajos/ultimos-trabajos.component';
+import { UserProfileComponent } from './views/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UltimosTrabajosComponent } from './views/ultimos-trabajos/ultimos-traba
     MapaComponent,
     ListasOfertasLaboralesComponent,
     ItemListaComponentComponent,
-    UltimosTrabajosComponent
+    UltimosTrabajosComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
