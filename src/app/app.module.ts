@@ -16,6 +16,7 @@ import { ItemListaComponentComponent } from './item-lista-component/item-lista-c
 import { UltimosTrabajosComponent } from './views/ultimos-trabajos/ultimos-trabajos.component';
 import { UserProfileComponent } from './views/user-profile/user-profile.component';
 import { BannerResumenComponent } from './banner-resumen/banner-resumen.component';
+import { TablaHistorialComponent } from './tabla-historial/tabla-historial.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BannerResumenComponent } from './banner-resumen/banner-resumen.componen
     ItemListaComponentComponent,
     UltimosTrabajosComponent,
     UserProfileComponent,
-    BannerResumenComponent
+    BannerResumenComponent,
+    TablaHistorialComponent
   ],
   imports: [
     BrowserModule,
