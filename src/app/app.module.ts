@@ -15,6 +15,8 @@ import { ListasOfertasLaboralesComponent } from './listas-ofertas-laborales/list
 import { ItemListaComponentComponent } from './item-lista-component/item-lista-component.component';
 import { UltimosTrabajosComponent } from './views/ultimos-trabajos/ultimos-trabajos.component';
 import { UserProfileComponent } from './views/user-profile/user-profile.component';
+import { BannerResumenComponent } from './banner-resumen/banner-resumen.component';
+import { TablaHistorialComponent } from './tabla-historial/tabla-historial.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { UserProfileComponent } from './views/user-profile/user-profile.componen
     ListasOfertasLaboralesComponent,
     ItemListaComponentComponent,
     UltimosTrabajosComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    BannerResumenComponent,
+    TablaHistorialComponent
   ],
   imports: [
     BrowserModule,
