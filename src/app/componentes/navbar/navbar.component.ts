@@ -18,7 +18,9 @@ export class NavbarComponent implements OnInit {
   faUser = faUser;
   faSignOutAlt = faSignOutAlt;
   constructor() { }
-
+  logOut(){
+    console.log('Te quieres salir?')
+  }
   ngOnInit(): void {
   }
 
