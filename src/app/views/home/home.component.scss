@@ -1,4 +1,10 @@
 .sidebar-ofertas-laborales {
-  height: 100vh;
-  overflow: scroll;
+  height: 90vh;
+  overflow-y: scroll;
+}
+#contenedorLista{
+  @media screen and (max-width: 991px) {
+   
+    margin-top: 75px;
+  }
 }
