@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import * as Mapboxgl from 'mapbox-gl'
+import * as Mapboxgl from 'mapbox-gl';
 import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-mapa',
   templateUrl: './mapa.component.html',
-  styleUrls: ['./mapa.component.sass']
+  styleUrls: ['./mapa.component.scss'],
 })
 export class MapaComponent implements OnInit {
   Map: Mapboxgl.Map;
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     Mapboxgl.accessToken = environment.mapboxKey;
@@ -17,8 +17,7 @@ export class MapaComponent implements OnInit {
       container: 'mapa-trabajo',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-77.04, 38.907],
-      zoom: 11.15
+      zoom: 11.15,
     });
   }
-
 }

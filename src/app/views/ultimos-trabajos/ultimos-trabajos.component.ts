@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-ultimos-trabajos',
   templateUrl: './ultimos-trabajos.component.html',
-  styleUrls: ['./ultimos-trabajos.component.sass']
+  styleUrls: ['./ultimos-trabajos.component.scss'],
 })
 export class UltimosTrabajosComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
