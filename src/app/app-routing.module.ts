@@ -5,6 +5,7 @@ import { LoginComponent } from './views/login/login.component';
 import { ErrorComponent } from './views/error/error.component';
 import { UltimosTrabajosComponent } from './views/ultimos-trabajos/ultimos-trabajos.component';
 import { UserProfileComponent } from './views/user-profile/user-profile.component';
+import { RegistroComponent } from './views/registro/registro.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path:'perfil',
     component:UserProfileComponent
+  },
+  {
+    path:'registro',
+    component:RegistroComponent
   },
   {
     path:'**',
