@@ -6,12 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  position = {latitude:-28.90,longitud:29.4}
+  geoPosition;
+  mostrarUbicacion(){
+    console.log(this.geoPosition);
+  }
   constructor() {
     console.log('lol');
     this.getUserPosition();
     console.log(this.geoPosition);
   }
-  geoPosition;
   ngOnInit(): void {
     console.log('soy inicio',this.geoPosition)
   }
