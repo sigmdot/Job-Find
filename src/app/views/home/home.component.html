@@ -1,15 +1,17 @@
 <div class="container-fluid alto100">
-    <div class="row alto100">
-        <div class="col-12 col-lg-8 border row m-0 p-0">
-            <div class="col-12" style="height: 60%;">
-                <app-mapa></app-mapa>
-                <button class="btn btn-success w-100 mt-2">ON</button>
-            </div>
-        </div>
-        <div class="col-12 col-lg-4 border p-0">
-            <div class="col-12 alto100" >
-                <app-listas-ofertas-laborales></app-listas-ofertas-laborales>
-            </div>
-        </div>
+  <div class="row alto100">
+    <div class="col-12 col-lg-8 border row m-0 p-0 alto100">
+      <div class="col-12" style="height: 60%;">
+        <app-mapa></app-mapa>
+        <button class="btn btn-success w-100 mt-2">ON</button>
+        <button class="btn btn-success w-100 mt-2">ON</button>
+      </div>
     </div>
+    <div class="col-12 col-lg-4 border p-0" id="contenedorLista">
+      <span class="text-center"><h4>Ofertas en tú zona</h4></span>
+      <div class="sidebar-ofertas-laborales col-12 alto100">
+        <app-listas-ofertas-laborales></app-listas-ofertas-laborales>
+      </div>
+    </div>
+  </div>
 </div>

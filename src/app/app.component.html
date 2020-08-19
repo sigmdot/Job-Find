@@ -1,8 +1,6 @@
 <div class="container-fluid alto100 row m-0 pl-0">
-    <div class="col-lg is-hidden-mobile px-0 py-2 alto100">
-        <app-navbar></app-navbar>
-    </div>
-    <div class="col-12 col-lg-11  py-2">
-        <router-outlet></router-outlet>
-    </div>
+  <app-navbar class="py-2 is-hidden-mobile"></app-navbar>
+  <div class="col col-md col-lg py-2 ml-2">
+    <router-outlet></router-outlet>
+  </div>
 </div>

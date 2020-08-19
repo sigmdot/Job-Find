@@ -1,0 +1,14 @@
+html,
+body {
+  height: 100%;
+}
+
+.alto100 {
+  height: 100%;
+}
+
+.is-hidden-mobile {
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+}

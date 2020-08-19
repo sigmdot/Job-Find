@@ -13,6 +13,10 @@ import { ErrorComponent } from './views/error/error.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { ListasOfertasLaboralesComponent } from './listas-ofertas-laborales/listas-ofertas-laborales.component';
 import { ItemListaComponentComponent } from './item-lista-component/item-lista-component.component';
+import { UltimosTrabajosComponent } from './views/ultimos-trabajos/ultimos-trabajos.component';
+import { UserProfileComponent } from './views/user-profile/user-profile.component';
+import { BannerResumenComponent } from './banner-resumen/banner-resumen.component';
+import { TablaHistorialComponent } from './tabla-historial/tabla-historial.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { ItemListaComponentComponent } from './item-lista-component/item-lista-c
     ErrorComponent,
     MapaComponent,
     ListasOfertasLaboralesComponent,
-    ItemListaComponentComponent
+    ItemListaComponentComponent,
+    UltimosTrabajosComponent,
+    UserProfileComponent,
+    BannerResumenComponent,
+    TablaHistorialComponent
   ],
   imports: [
     BrowserModule,
