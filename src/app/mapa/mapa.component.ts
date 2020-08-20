@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import * as Mapboxgl from 'mapbox-gl';
 import { environment } from 'src/environments/environment';
 
@@ -7,23 +7,31 @@ import { environment } from 'src/environments/environment';
   templateUrl: './mapa.component.html',
   styleUrls: ['./mapa.component.scss'],
 })
-export class MapaComponent implements OnInit {
+export class MapaComponent implements OnInit, OnChanges {
   Map: Mapboxgl.Map;
+  marker: Mapboxgl.Marker;
   @Input() center: Geolocation;
-  constructor() {}
+  type = typeof this.center;
+  constructor() { }
   ngOnInit(): void {
-    Mapboxgl.accessToken = environment.mapboxKey;
-    this.Map = new Mapboxgl.Map({
-      container: 'mapa-trabajo',
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [30.5, 50.5],
-      zoom: 5,
-    });
-    this.Map.boxZoom.disable();
-    this.Map.scrollZoom.disable();
-    this.Map.doubleClickZoom.disable();
-    const marker = new Mapboxgl.Marker()
-      .setLngLat([30.5, 50.5])
-      .addTo(this.Map);
+
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    if (typeof changes.center.currentValue !== "undefined") {
+      Mapboxgl.accessToken = environment.mapboxKey;
+      this.Map = new Mapboxgl.Map({
+        container: 'mapa-trabajo',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: changes.center.currentValue,
+        zoom: 13,
+      });
+      this.Map.boxZoom.disable();
+      this.Map.scrollZoom.disable();
+      this.Map.doubleClickZoom.disable();
+      this.marker = new Mapboxgl.Marker()
+        .setLngLat(changes.center.currentValue)
+        .addTo(this.Map);
+    }
+
   }
 }
