@@ -18,6 +18,8 @@ import { UserProfileComponent } from './views/user-profile/user-profile.componen
 import { BannerResumenComponent } from './banner-resumen/banner-resumen.component';
 import { TablaHistorialComponent } from './tabla-historial/tabla-historial.component';
 import { RegistroComponent } from './views/registro/registro.component';
+import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
+import { FormularioDatosPersonalesComponent } from './formulario-datos-personales/formulario-datos-personales.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { RegistroComponent } from './views/registro/registro.component';
     UserProfileComponent,
     BannerResumenComponent,
     TablaHistorialComponent,
-    RegistroComponent
+    RegistroComponent,
+    FormularioRegistroComponent,
+    FormularioDatosPersonalesComponent
   ],
   imports: [
     BrowserModule,
