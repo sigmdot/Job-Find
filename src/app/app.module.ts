@@ -20,6 +20,10 @@ import { TablaHistorialComponent } from './tabla-historial/tabla-historial.compo
 import { RegistroComponent } from './views/registro/registro.component';
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 import { FormularioDatosPersonalesComponent } from './formulario-datos-personales/formulario-datos-personales.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//prueba
+import { MatSliderModule } from '@angular/material/slider';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,10 @@ import { FormularioDatosPersonalesComponent } from './formulario-datos-personale
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
