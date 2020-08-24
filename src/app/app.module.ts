@@ -24,7 +24,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //prueba
 import { MatSliderModule } from '@angular/material/slider';
 import {MatStepperModule} from '@angular/material/stepper';
-
+//backend
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule, SETTINGS} from '@angular/fire/firestore';
+import {environment} from '../environments/environment'
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,9 +52,11 @@ import {MatStepperModule} from '@angular/material/stepper';
     FontAwesomeModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatStepperModule
+    MatStepperModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [{ provide: SETTINGS, useValue:{} }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
