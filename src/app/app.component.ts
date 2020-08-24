@@ -10,24 +10,16 @@ export class AppComponent implements OnInit {
   lol: any;
   posi: any = null;
 
-  constructor(private ubiServi: UbicacionService){
-    this.lol = ubiServi.Locations.subscribe({
-      next(position: any ){
-        console.log(position.coords);
-        this.posi = [position.coords.latitude, position.coords.longitude];
-      },
-      error(msg){
-        console.log(msg);
-      }
-    });
-    
-  }
+  constructor(private ubiServi: UbicacionService){}
 
-  
-  
   title = 'jobFind';
   // tslint:disable-next-line: typedef
-  ngOnInit(){}
+  ngOnInit(){
+    this.lol = this.ubiServi.Locations.subscribe((position:any) =>{
+      console.log(position.coords);
+      this.posi = [position.latitude, position.longitude];
+    });
+  }
  
 
 }
