@@ -1,13 +1,8 @@
-<div class="border alto100">
-  <app-item-lista-component></app-item-lista-component>
-  <app-item-lista-component></app-item-lista-component>
-  <app-item-lista-component></app-item-lista-component>
-  <app-item-lista-component></app-item-lista-component>
-  <app-item-lista-component></app-item-lista-component>
-  <app-item-lista-component></app-item-lista-component>
-  <app-item-lista-component></app-item-lista-component>
-  <app-item-lista-component></app-item-lista-component>
-  <app-item-lista-component></app-item-lista-component>
-  <app-item-lista-component></app-item-lista-component>
-  <app-item-lista-component></app-item-lista-component>
+<div class="border alto100"> 
+  <app-item-lista-component *ngFor="let aviso of avisosLista"></app-item-lista-component>
+  <div *ngIf="avisosLista == null" class="d-flex justify-content-center" style="width: 100%;">
+    <div class="spinner-grow text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
 </div>

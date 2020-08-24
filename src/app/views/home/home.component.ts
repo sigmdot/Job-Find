@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AvisosTrabajosService } from '../../services/avisos-trabajos.service';
+import { map } from 'rxjs/operators'
 
 @Component({
   selector: 'app-home',
@@ -6,20 +8,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  position = {latitude:-28.90,longitud:29.4}
   geoPosition = null;
-  mostrarUbicacion(){
+  avisos: any = null;
+
+  mostrarUbicacion(): void{
     console.log(this.geoPosition);
   }
-  constructor() {
+  constructor(private avisosService: AvisosTrabajosService) {
     this.getUserPosition();
+    this.obtenerListaAvisos();
   }
   ngOnInit(): void {
-    console.log('soy inicio',this.geoPosition)
+    console.log('soy inicio', this.geoPosition);
   }
-  async getUserPosition(){
+
+  // tslint:disable-next-line: typedef
+  obtenerListaAvisos(){
+    this.avisosService.getListaAvisosTrabajos().snapshotChanges().pipe(
+      map(changes =>
+        changes.map( c =>
+          ({key: c.payload.doc.id, ...c.payload.doc.data()  })
+        )
+      )
+    ).subscribe(avisos =>{
+      this.avisos = avisos;
+      console.log(avisos);
+    });
+  }
+
+  // tslint:disable-next-line: typedef
+  async getUserPosition() {
     if (window.navigator.geolocation) {
-      this.geoPosition= await window.navigator.geolocation
+      this.geoPosition = await window.navigator.geolocation
       .getCurrentPosition(position => this.geoPosition = [position.coords.longitude , position.coords.latitude] );
      }
      else{
