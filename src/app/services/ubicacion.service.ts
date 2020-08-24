@@ -1,25 +1,30 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UbicacionService {
-  ubicacion: any;
-  ubicacionChange: Subject <any> = new Subject<any>();
-  constructor() {
-    this.ubicacionChange.subscribe((value){
-      this.ubicacion = value;
-    });
-  }
-  async actualizarUbicacion(){
-    if (window.navigator.geolocation) {
-      const lol = await window.navigator.geolocation
-      .getCurrentPosition(position => this.ubicacionChange.next([position.coords.longitude , position.coords.latitude]) );
-      console.log(lol);
+  private ubicacion: any;
+  private locations = new Observable((observer) => {
+    let watchId: number;
+    if(navigator.geolocation){
+      watchId = navigator.geolocation.watchPosition((position) => {
+        observer.next(position);
+      },(error: PositionError) => {
+        observer.error(error);
+      });
+    }else{
+      observer.error('No locación admitida.');
     }
-     else{
-       alert('No es posible obtener tú ubicación, debido a que tu navegador no es compatible');
-     }
+  });
+  constructor(){
+    this.locations;
+  }
+  get Ubicacion(){
+    return this.ubicacion;
+  }
+  get Locations(){
+    return this.locations;
   }
 }
