@@ -13,9 +13,7 @@ export class MapaComponent implements OnInit, OnChanges {
   @Input() center: Geolocation;
   type = typeof this.center;
   constructor() { }
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
   ngOnChanges(changes: SimpleChanges): void {
     if ((typeof changes.center.currentValue !== "undefined") && (changes.center.currentValue !== null)) {
       if (this.Map === null) {
@@ -24,7 +22,7 @@ export class MapaComponent implements OnInit, OnChanges {
           container: 'mapa-trabajo',
           style: 'mapbox://styles/mapbox/streets-v11',
           center: changes.center.currentValue,
-          zoom: 13,
+          zoom: 13
         });
         this.Map.boxZoom.disable();
         this.Map.scrollZoom.disable();
