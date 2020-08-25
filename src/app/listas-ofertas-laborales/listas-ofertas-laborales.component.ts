@@ -9,6 +9,8 @@ export class ListasOfertasLaboralesComponent implements OnInit,OnChanges {
   constructor() {}
   @Input() avisosLista: any;
 
+  mostrarModal(): void {}
+
   ngOnInit(): void {
     console.log(this.avisosLista);
   }

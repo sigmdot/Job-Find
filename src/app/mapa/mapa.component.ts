@@ -10,13 +10,14 @@ import { environment } from 'src/environments/environment';
 export class MapaComponent implements OnInit, OnChanges {
   Map: Mapboxgl.Map = null;
   marker: Mapboxgl.Marker;
-  @Input() center: Geolocation;
+  @Input() center: any;
   type = typeof this.center;
   constructor() { }
-  ngOnInit(): void {}
+  ngOnInit(): void {console.log(this.center)}
   ngOnChanges(changes: SimpleChanges): void {
     if ((typeof changes.center.currentValue !== "undefined") && (changes.center.currentValue !== null)) {
       if (this.Map === null) {
+        console.log(changes.center.currentValue);
         Mapboxgl.accessToken = environment.mapboxKey;
         this.Map = new Mapboxgl.Map({
           container: 'mapa-trabajo',
@@ -32,6 +33,7 @@ export class MapaComponent implements OnInit, OnChanges {
           .addTo(this.Map);
       }
       else{
+        console.log(changes.center.currentValue);
         this.Map.setCenter(changes.center.currentValue);
         this.marker.setLngLat(changes.center.currentValue);
       }

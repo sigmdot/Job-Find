@@ -27,7 +27,9 @@ import {MatStepperModule} from '@angular/material/stepper';
 //backend
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule, SETTINGS} from '@angular/fire/firestore';
-import {environment} from '../environments/environment'
+import {environment} from '../environments/environment';
+import { ModalDetallesAvisoComponent } from './modal-detalles-aviso/modal-detalles-aviso.component';
+import { MapaDetalleComponent } from './mapa-detalle/mapa-detalle.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +46,9 @@ import {environment} from '../environments/environment'
     TablaHistorialComponent,
     RegistroComponent,
     FormularioRegistroComponent,
-    FormularioDatosPersonalesComponent
+    FormularioDatosPersonalesComponent,
+    ModalDetallesAvisoComponent,
+    MapaDetalleComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,33 @@
+<div class="modal fade alto100" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Titulo lindo y preciso</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body flex-column">
+        <div class="w-100 mb-1">
+          <h5>Sobre la publicación</h5>
+          <div class="row m-0">
+            <div class="col-lg-3 p-0 text-center">
+              <img src="https://picsum.photos/200/300" class="rounded-circle" style="height:100px; width:100%;">
+              <strong> primer nombre </strong>
+            </div>
+            <div class="col-lg-9 text-center">
+              <p>Necesito k me arreglen el techo pa la lluvia</p>
+            </div>
+          </div>
+        </div>
+        <div style="width:100%; height: 300px;">
+          <app-mapa-detalle style="width: 100%;" [center]="geoPox"></app-mapa-detalle>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Postular</button>
+      </div>
+    </div>
+  </div>
+</div>
