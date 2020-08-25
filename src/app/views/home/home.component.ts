@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
       )
     ).subscribe(avisos => {
       this.avisos = avisos;
-      console.log(avisos);
     });
   }
 
