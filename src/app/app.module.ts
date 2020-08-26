@@ -29,7 +29,9 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule, SETTINGS} from '@angular/fire/firestore';
 import {environment} from '../environments/environment';
 import { ModalDetallesAvisoComponent } from './modal-detalles-aviso/modal-detalles-aviso.component';
-import { MapaDetalleComponent } from './mapa-detalle/mapa-detalle.component'
+import { MapaDetalleComponent } from './mapa-detalle/mapa-detalle.component';
+import { LandingComponent } from './views/landing/landing.component';
+import { UltimosTrabajosSolicitadosComponent } from './views/ultimos-trabajos-solicitados/ultimos-trabajos-solicitados.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,9 @@ import { MapaDetalleComponent } from './mapa-detalle/mapa-detalle.component'
     FormularioRegistroComponent,
     FormularioDatosPersonalesComponent,
     ModalDetallesAvisoComponent,
-    MapaDetalleComponent
+    MapaDetalleComponent,
+    LandingComponent,
+    UltimosTrabajosSolicitadosComponent
   ],
   imports: [
     BrowserModule,
