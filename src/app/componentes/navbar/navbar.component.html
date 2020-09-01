@@ -1,20 +1,23 @@
 <div id="navbar" class="row m-0 rounded">
     <div class="col-12 p-0 text-light w-100 align-self-start">
-        <button class="btn w-100 text-light text-center" routerLink="/home">
+        <button class="btn btn-dark w-100 text-light text-center" routerLink="/home">
             <fa-icon [icon]="faHome"></fa-icon>
         </button>
-        <button class="btn w-100 text-light text-center" routerLink="/ultimostrabajos">
+        <button class="btn btn-dark w-100 text-light text-center" routerLink="/ultimostrabajos">
             <fa-icon [icon]="faClock"></fa-icon>
         </button>
-        <button class="btn w-100 text-light text-center">
+        <button class="btn btn-dark w-100 text-light text-center" routerLink="/trabajosolicitados">
             <fa-icon [icon]="faToolbox"> </fa-icon>
+        </button>
+        <button class="btn btn-warning w-100 text-light text-center p-2">
+            <fa-icon [icon]="faPlus"></fa-icon>
         </button>
     </div>
     <div class="col-12 p-0 text-light w-100 align-self-end">
-        <button class="btn w-100 text-light text-center" routerLink="/perfil">
+        <button class="btn btn-dark w-100 text-light text-center" routerLink="/perfil">
            <fa-icon [icon]="faUser"></fa-icon> 
         </button>
-        <button class="btn w-100 text-light text-center" (click)="logOut()">
+        <button class="btn btn-dark w-100 text-light text-center" (click)="logOut()">
             <fa-icon [icon]="faSignOutAlt"></fa-icon>
         </button>
     </div>

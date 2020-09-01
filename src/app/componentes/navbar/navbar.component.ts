@@ -5,6 +5,7 @@ import {
   faToolbox,
   faUser,
   faSignOutAlt,
+  faPlus
 } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-navbar',
@@ -17,6 +18,7 @@ export class NavbarComponent implements OnInit {
   faToolbox = faToolbox;
   faUser = faUser;
   faSignOutAlt = faSignOutAlt;
+  faPlus = faPlus;
   constructor() {}
   logOut() {
     console.log('Te quieres salir?');
