@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {FormGroup,  FormControl, ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-formulario-datos-personales',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulario-datos-personales.component.scss']
 })
 export class FormularioDatosPersonalesComponent implements OnInit {
-
+  formDatosPersonales = new FormGroup({
+    nombres: new FormControl(''),
+    apellidos: new FormControl(''),
+    region: new FormControl(''),
+    comuna: new FormControl(''),
+    telefono: new FormControl(''),
+    sobreMi: new FormControl('')
+  });
   constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

@@ -4,19 +4,17 @@
             <h3>Registro</h3>
         </div>
         <div class="col-12 p-0">
-            <mat-horizontal-stepper [linear]="true" #stepper>
-                <mat-step>
+            <mat-horizontal-stepper linear #stepper>
+                <mat-step [stepControl]="FormpasoUno">
                     <ng-template matStepLabel>Tus datos de usuario</ng-template>
                     <app-formulario-registro></app-formulario-registro>
-                    <div>
-                        <button class="w-100 btn btn-primary" mat-button matStepperNext>Next</button>
-                    </div>
+                    <div><button (click)="lol()"></button></div>
                 </mat-step>
-                <mat-step>
+                <mat-step [stepControl]="FormpasoDos">
                     <ng-template matStepLabel>Tus datos personales</ng-template>
                     <app-formulario-datos-personales></app-formulario-datos-personales>
+                    <div><button (click)="lol2()"></button></div>
                 </mat-step>
-           
             </mat-horizontal-stepper>
         </div>
     </div>

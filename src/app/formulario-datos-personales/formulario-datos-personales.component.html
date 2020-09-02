@@ -1,4 +1,4 @@
-<form action="">
+<form [formGroup]="formDatosPersonales">
     <div class="form-group">
         <label for="exampleInputEmail1">Nombres</label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -6,8 +6,7 @@
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Apellidos</label>
-        <input type="text" class="form-control" aria-describedby="nombresHelp"
-            placeholder="Cayo Villalobos">
+        <input type="text" class="form-control" aria-describedby="nombresHelp" placeholder="Cayo Villalobos">
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Región</label>
@@ -17,7 +16,7 @@
             <option>3</option>
             <option>4</option>
             <option>5</option>
-          </select>
+        </select>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Comuna</label>
@@ -27,7 +26,7 @@
             <option>3</option>
             <option>4</option>
             <option>5</option>
-          </select>
+        </select>
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Numero de telefono</label>
@@ -37,6 +36,5 @@
         <label for="exampleInputPassword1">Descripción sobre mí</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="resize: none;"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary w-100">Finalizar registro</button>
-    <button type="button" class="btn btn-secondary w-100 mt-1">Cancelar</button>
+   
 </form>

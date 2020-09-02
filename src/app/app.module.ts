@@ -23,7 +23,10 @@ import { FormularioDatosPersonalesComponent } from './formulario-datos-personale
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //prueba
 import { MatSliderModule } from '@angular/material/slider';
-import {MatStepperModule} from '@angular/material/stepper';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 //backend
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule, SETTINGS} from '@angular/fire/firestore';
@@ -34,6 +37,7 @@ import { ModalDetallesAvisoComponent } from './modal-detalles-aviso/modal-detall
 import { MapaDetalleComponent } from './mapa-detalle/mapa-detalle.component';
 import { LandingComponent } from './views/landing/landing.component';
 import { UltimosTrabajosSolicitadosComponent } from './views/ultimos-trabajos-solicitados/ultimos-trabajos-solicitados.component'
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +69,12 @@ import { UltimosTrabajosSolicitadosComponent } from './views/ultimos-trabajos-so
     MatStepperModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [{ provide: SETTINGS, useValue:{} }],
   bootstrap: [AppComponent]

@@ -1,30 +1,28 @@
-<form action="">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Correo electronico</label>
-        <input matInput type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="UsuarioRegistro@correo.cl" required>
+<form [formGroup]="formularioRegistro">
+    <mat-form-field class="form-group w-100">
+        <input matInput type="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Correo" formControlName="correo" required>
+    </mat-form-field>
+    <mat-form-field class="form-group w-100">
+        <input matInput type="email" class="form-control" 
+            placeholder="Repetir correo" formControlName="correoConf">
+    </mat-form-field>
+    <mat-form-field class="form-group w-100">
+        <input matInput type="number" class="form-control"
+            placeholder="Rut" formControlName="rut" required>
+    </mat-form-field>
+    <mat-form-field class="form-group w-100">
+        <input matInput type="text" class="form-control" id="nDocInput" aria-describedby="numeroDocumento"
+            placeholder="N° documento" formControlName="nDoc" required>      
+    </mat-form-field>
+    <mat-form-field class="form-group w-100">
+        <input matInput type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" formControlName="pass" required>
+    </mat-form-field>
+    <mat-form-field class="form-group w-100">
+        <input matInput type="password" class="form-control" placeholder="Contraseña" formControlName="passConf" required>
+    </mat-form-field>
+    <div>
+        <button mat-raised-button matStepperNext class="nav-btn pull-right">Next</button>
     </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Repetir correo electronico</label>
-        <input type="email" class="form-control" 
-            placeholder="RepetirUsuarioRegistro@correo.cl">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">RUT</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="1111111-1">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Numero documento</label>
-        <input type="text" class="form-control" id="rutInput" aria-describedby="rutHelp"
-            placeholder="1111111111">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Contraseña</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Repetir contraseña</label>
-        <input type="password" class="form-control" placeholder="Contraseña">
-    </div>
+
 </form>
