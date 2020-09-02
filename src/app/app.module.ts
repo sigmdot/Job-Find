@@ -27,6 +27,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 //backend
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule, SETTINGS} from '@angular/fire/firestore';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+
 import {environment} from '../environments/environment';
 import { ModalDetallesAvisoComponent } from './modal-detalles-aviso/modal-detalles-aviso.component';
 import { MapaDetalleComponent } from './mapa-detalle/mapa-detalle.component';
@@ -62,7 +64,8 @@ import { UltimosTrabajosSolicitadosComponent } from './views/ultimos-trabajos-so
     MatSliderModule,
     MatStepperModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [{ provide: SETTINGS, useValue:{} }],
   bootstrap: [AppComponent]
