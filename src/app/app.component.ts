@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {  Router , NavigationEnd  } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(){}
+  currentRoute: any;
+  constructor(private router: Router){
+    router.events.subscribe( (event) =>{
+      console.log(event);
+      if (event instanceof NavigationEnd){
+        this.currentRoute = event.url;
+      }
+    });
+  }
   title = 'jobFind';
   ngOnInit(): void {}
 
