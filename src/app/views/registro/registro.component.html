@@ -15,8 +15,11 @@
                     <app-formulario-datos-personales></app-formulario-datos-personales>
                     <div><button (click)="lol2()">Ver formulario dato 2</button></div>
                 </mat-step>
-                <mat-step>
+                <mat-step [stepControl]="FormpasoTres">
+                    <ng-template matStepLabel>Tú foto</ng-template>
                     <app-formulario-subir-foto></app-formulario-subir-foto>
+                    <div><button (click)="lol3()">Ver formulario dato 3</button></div>
+                    <div> <button class="btn btn-primary" (click)="registro()"> Terminar de registrarme </button> </div>
                 </mat-step>
             </mat-horizontal-stepper>
         </div>
