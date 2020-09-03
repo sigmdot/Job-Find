@@ -8,12 +8,15 @@
                 <mat-step [stepControl]="FormpasoUno">
                     <ng-template matStepLabel>Tus datos de usuario</ng-template>
                     <app-formulario-registro></app-formulario-registro>
-                    <div><button (click)="lol()"></button></div>
+                    <div><button (click)="lol()">Ver formulario dato</button></div>
                 </mat-step>
                 <mat-step [stepControl]="FormpasoDos">
                     <ng-template matStepLabel>Tus datos personales</ng-template>
                     <app-formulario-datos-personales></app-formulario-datos-personales>
-                    <div><button (click)="lol2()"></button></div>
+                    <div><button (click)="lol2()">Ver formulario dato 2</button></div>
+                </mat-step>
+                <mat-step>
+                    <app-formulario-subir-foto></app-formulario-subir-foto>
                 </mat-step>
             </mat-horizontal-stepper>
         </div>

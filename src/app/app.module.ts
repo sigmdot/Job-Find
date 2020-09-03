@@ -38,6 +38,8 @@ import { MapaDetalleComponent } from './mapa-detalle/mapa-detalle.component';
 import { LandingComponent } from './views/landing/landing.component';
 import { UltimosTrabajosSolicitadosComponent } from './views/ultimos-trabajos-solicitados/ultimos-trabajos-solicitados.component'
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { FormularioSubirFotoComponent } from './formulario-subir-foto/formulario-subir-foto.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +60,8 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
     ModalDetallesAvisoComponent,
     MapaDetalleComponent,
     LandingComponent,
-    UltimosTrabajosSolicitadosComponent
+    UltimosTrabajosSolicitadosComponent,
+    FormularioSubirFotoComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +77,8 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
     FormsModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ToastrModule.forRoot()
   ],
   providers: [{ provide: SETTINGS, useValue:{} }],
   bootstrap: [AppComponent]

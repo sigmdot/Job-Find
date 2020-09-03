@@ -2,25 +2,27 @@
     <div class="form-group">
         <label for="exampleInputEmail1">Nombres</label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="Nicolas Alejandro" formControlName="nombres">
+            placeholder="Nicolas Alejandro" formControlName="nombres" required>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Apellidos</label>
-        <input type="text" class="form-control" aria-describedby="nombresHelp" placeholder="Cayo Villalobos" formControlName="apellidos">
+        <input type="text" class="form-control" aria-describedby="nombresHelp" placeholder="Cayo Villalobos" formControlName="apellidos" required>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Región</label>
-        <select class="form-control" id="exampleFormControlSelect1" formControlName="region">
+        <select class="form-control" id="exampleFormControlSelect1" formControlName="region" required>
             <option *ngFor="let region of opcionesRegion" [ngValue]="region.value"> {{region.name}} </option>
         </select>
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Numero de telefono</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="+569 11111111" formControlName="telefono">
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="+569 11111111" formControlName="telefono" required>
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Descripción sobre mí</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="resize: none;" formControlName="sobreMi"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="resize: none;" formControlName="sobreMi" required></textarea>
     </div>
-   
+    <div>
+        <button matStepperNext class="btn btn-primary"> Next </button>
+    </div>
 </form>
