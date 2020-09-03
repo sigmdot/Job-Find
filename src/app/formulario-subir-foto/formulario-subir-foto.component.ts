@@ -8,20 +8,24 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 })
 export class FormularioSubirFotoComponent implements OnInit {
   url = null;
+  selectedFiles: FileList;
+
   formFoto = new FormGroup({
     file: new FormControl(null, Validators.required)
   });
+
   constructor() { }
   onSelectFile(event) {
     if (event.target.files && event.target.files[0]) {
       var reader = new FileReader();
+      this.formFoto.patchValue({
+        file: event.target.files[0]
+      });
       reader.readAsDataURL(event.target.files[0]); // read file as data url
 
+      // tslint:disable-next-line: no-shadowed-variable
       reader.onload = (event) => { // called once readAsDataURL is completed
         this.url = event.target.result;
-        this.formFoto.patchValue({
-          file: reader.result
-        });
         console.log(this.formFoto.value);
       }
     }
