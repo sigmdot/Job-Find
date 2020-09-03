@@ -1,1 +1,20 @@
-<p>formulario-subir-foto works!</p>
+<div class="w-100">
+    <div class="form-group text-center">
+        <h5>Subir una foto</h5>
+        <input type='file' (change)="onSelectFile($event)">
+    </div>
+    <div class="d-flex justify-content-center" *ngIf="url != null">
+        <img [src]="url" height="200" width="400">
+    </div>
+    <div class="w-100">
+        <div class="w-100 text-center">
+            <strong>Algunos tips</strong>
+        </div>
+        <ul>
+            <li>Preparate</li>
+            <li>jajaja</li>
+            <li>lol </li>
+            <li> jijii </li>
+        </ul>
+    </div>
+</div>
