@@ -61,7 +61,7 @@ export class FormularioRegistroComponent implements OnInit {
       });
     }
     if (rut !== ''){
-      this.toastr.warning('Dato necesario', 'RUT no ingresado', {
+      this.toastr.success('Dato necesario', 'RUT ingresado', {
         timeOut: 2500
       });
     }
